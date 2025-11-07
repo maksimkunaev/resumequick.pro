@@ -1,0 +1,107 @@
+.cookieConsent {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  /* Remove padding from parent container */
+  padding: 0;
+  transform: translateZ(0); /* Forces GPU acceleration */
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  /* Move padding to content container */
+  padding: 16px;
+}
+
+/* Rest of the styles remain the same */
+.message {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.5;
+  color: #333;
+  flex: 1;
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.acceptButton,
+.rejectButton {
+  padding: 10px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.acceptButton {
+  background-color: #2563eb;
+  color: white;
+}
+
+.acceptButton:hover {
+  background-color: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.rejectButton {
+  background-color: #f3f4f6;
+  color: #4b5563;
+}
+
+.rejectButton:hover {
+  background-color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.acceptButton:active,
+.rejectButton:active {
+  transform: translateY(0);
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 640px) {
+  .content {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .buttonContainer {
+    flex-direction: column-reverse;
+  }
+
+  .acceptButton,
+  .rejectButton {
+    width: 100%;
+    padding: 12px;
+  }
+}

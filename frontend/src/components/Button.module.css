@@ -1,0 +1,61 @@
+/* components/Button.module.css */
+
+.button {
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f5f5f5;
+}
+
+.button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.primaryButton {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.primaryButton:hover {
+    background-color: #0056b3;
+}
+
+/* Tab-specific styles */
+.tab {
+    padding: 12px 24px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    font-size: 16px;
+    font-weight: 500;
+    color: #666;
+    transition: all 0.3s ease;
+    border-radius: 4px 4px 0 0;
+}
+
+.tab:hover {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+.activeTab {
+    border-bottom-color: #007bff;
+    color: #007bff;
+    background-color: #f8f9fa;
+    font-weight: bold;
+}
+
+.activeTab:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}

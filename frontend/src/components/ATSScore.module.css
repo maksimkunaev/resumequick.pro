@@ -1,0 +1,120 @@
+/* ATSScore.module.css */
+.container {
+    width: 100%;
+    max-width: 100%;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.header {
+    margin-bottom: 32px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.description {
+    font-size: 16px;
+    color: #6b7280;
+    line-height: 1.5;
+}
+
+.content {
+    display: flex;
+    gap: 32px;
+    align-items: flex-start;
+}
+
+.formSection {
+    flex: 1;
+}
+
+.inputGroup {
+    margin-bottom: 24px;
+}
+
+.label {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 8px;
+}
+
+.textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 12px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: inherit;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.textarea:focus {
+    outline: none;
+    border-color: #3b82f6;
+}
+
+.textarea::placeholder {
+    color: #9ca3af;
+}
+
+.button {
+    width: 100%;
+    padding: 16px 24px;
+    background: #374151;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+    background: #1f2937;
+}
+
+.button:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+}
+
+.resultsSection {
+    flex: 1;
+    padding: 24px;
+    background: #f9fafb;
+    border-radius: 12px;
+    min-height: 200px;
+}
+
+.scoreTitle {
+    font-size: 24px;
+    font-weight: 700;
+    color: #059669;
+    margin-bottom: 16px;
+}
+
+.skillsText {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.emptyState {
+    text-align: center;
+    color: #9ca3af;
+    font-style: italic;
+    margin-top: 60px;
+}

@@ -1,0 +1,18 @@
+flask
+flask-cors
+groq
+openai
+python-dotenv
+weasyprint
+tqdm
+markdown2
+# ATS deps
+spacy
+pypdf
+textblob
+matplotlib
+scikit-learn
+nltk
+firebase-admin
+
+# python3 -m spacy download en_core_web_sm

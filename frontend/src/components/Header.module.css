@@ -1,0 +1,65 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem;
+    min-height: 56px;
+    border-bottom: 1px solid #e5e7eb;
+    background-color: white;
+    font-size: 0.875rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.logoIcon {
+    font-size: 1.125rem;
+}
+
+.logoText {
+    font-size: 1rem;
+}
+
+.rightSection {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.credits {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #74c937;
+}
+
+.creditsEmpty {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #ef4444;
+}
+
+.button {
+    border: 1px solid #d1d5db;
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.button:hover {
+    background-color: #f9fafb;
+}
+
+.userName {
+    color: #374151;
+    max-width: 120px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,118 @@
+/* Modal.module.css */
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 50;
+    overflow-y: auto;
+}
+
+.modal {
+    background: white;
+    width: 1200px;
+    max-width: 95%;
+    max-height: calc(100vh - 40px);
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 24px 24px 0 24px;
+    flex-shrink: 0;
+}
+
+.closeButton {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: #6c757d;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+}
+
+.closeButton:hover {
+    color: #000;
+    background: #f8f9fa;
+}
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #22243a;
+    margin: 0 0 12px 0;
+    padding-right: 32px;
+}
+
+.description {
+    font-size: 14px;
+    color: #6c757d;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.content {
+    /* padding: 20px 24px 24px 24px; */
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+    flex: 1;
+    min-height: 0;
+}
+
+.button {
+    width: 100%;
+    background: #ffffff;
+    border: 2px solid #22243a;
+    color: #22243a;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 1.04rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.18s ease;
+    flex-shrink: 0;
+}
+
+.button:disabled {
+    background: #f8f9fa;
+    color: #6c757d;
+    border-color: #dee2e6;
+    cursor: not-allowed;
+}
+
+.button:hover:not(:disabled) {
+    background: #f8f9fa;
+    border-color: #000;
+    color: #000;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(34, 36, 58, 0.1);
+}
+
+.primaryButton {
+    background: #22243a;
+    color: white;
+    border-color: #22243a;
+}
+
+.primaryButton:hover:not(:disabled) {
+    background: #1a1c2e;
+    border-color: #1a1c2e;
+    color: white;
+}

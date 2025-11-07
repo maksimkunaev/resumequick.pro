@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Starfield — pure CSS */
+:root {
+  --starfield-height: 2000px;
+  /* высота «петли» */
+  --speed-1: 50s;
+  --speed-2: 100s;
+  --speed-3: 150s;
+}
+
+.starfield {
+  position: fixed;
+  /* фоновый слой на всю страницу */
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+  /* под контентом */
+  background: radial-gradient(ellipse at bottom, #1B2735 0%, #090A0F 100%);
+  pointer-events: none;
+}
+
+.starfield .layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  /* будет переопределено на слоях 2/3 */
+  height: 1px;
+  background: transparent;
+  will-change: transform;
+}
+
+/* Мелкие звезды */
+.starfield .stars {
+  width: 1px;
+  height: 1px;
+  box-shadow:
+    182px 422px #FFF, 1042px 1320px #FFF, 1634px 1874px #FFF, 921px 174px #FFF,
+    1415px 905px #FFF, 55px 1688px #FFF, 1880px 1432px #FFF, 377px 1510px #FFF,
+    129px 765px #FFF, 1568px 332px #FFF, 171px 1380px #FFF, 1960px 640px #FFF;
+  animation: starScroll var(--speed-1) linear infinite;
+}
+
+.starfield .stars::after {
+  content: "";
+  position: absolute;
+  top: var(--starfield-height);
+  width: 1px;
+  height: 1px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+/* Средние звезды */
+.starfield .stars2 {
+  width: 2px;
+  height: 2px;
+  box-shadow:
+    320px 340px #FFF, 780px 1540px #FFF, 1450px 1180px #FFF, 1680px 290px #FFF,
+    210px 1320px #FFF, 980px 560px #FFF, 1820px 1720px #FFF, 460px 1840px #FFF;
+  animation: starScroll var(--speed-2) linear infinite;
+}
+
+.starfield .stars2::after {
+  content: "";
+  position: absolute;
+  top: var(--starfield-height);
+  width: 2px;
+  height: 2px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+/* Крупные звезды */
+.starfield .stars3 {
+  width: 3px;
+  height: 3px;
+  box-shadow:
+    200px 1620px #FFF, 1320px 240px #FFF, 1640px 960px #FFF, 560px 1180px #FFF,
+    980px 1480px #FFF, 1720px 520px #FFF;
+  animation: starScroll var(--speed-3) linear infinite;
+}
+
+.starfield .stars3::after {
+  content: "";
+  position: absolute;
+  top: var(--starfield-height);
+  width: 3px;
+  height: 3px;
+  background: transparent;
+  box-shadow: inherit;
+}
+
+@keyframes starScroll {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(calc(-1 * var(--starfield-height)));
+  }
+}
+
+/* Доступность: выключаем анимацию, если пользователь против движухи */
+@media (prefers-reduced-motion: reduce) {
+  .starfield .layer {
+    animation: none !important;
+  }
+}

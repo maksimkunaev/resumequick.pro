@@ -1,0 +1,46 @@
+.ipynb_checkpoints/
+__pycache__/
+.env
+.env_legacy
+
+# Build artifacts
+frontend/build/
+frontend/dist/
+
+# Data directories with their content
+clip_ai/data/images/
+clip_ai/data/
+cache/
+
+# Keep directories but ignore JSON files
+analytics/*
+!analytics/.gitkeep
+
+feedback/*
+!feedback/.gitkeep
+
+# Specific JSON files that vary between environments
+*.jsondeploy.sh
+
+# Logs
+logs/access.log
+logs/error.log
+
+# Deployment scripts
+start.sh
+diff.txt
+
+# Database
+db_data
+
+# Sensitive files
+serviceAccountKey.json
+*.key
+*.pem
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
