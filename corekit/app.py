@@ -94,4 +94,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=PORT)
+    app.run(debug=os.getenv("FLASK_DEBUG") == "1", port=PORT)
