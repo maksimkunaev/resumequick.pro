@@ -44,3 +44,7 @@ serviceAccountKey.json
 *.swp
 *.swo
 *~
+node_modules/
+*.pyc
+.DS_Store
+.next/
