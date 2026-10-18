@@ -2,6 +2,8 @@
 __pycache__/
 .env
 .env_legacy
+node_modules/
+.DS_Store
 
 # Build artifacts
 frontend/build/
@@ -19,8 +21,8 @@ analytics/*
 feedback/*
 !feedback/.gitkeep
 
-# Specific JSON files that vary between environments
-*.jsondeploy.sh
+# Deployment script
+deploy.sh
 
 # Logs
 logs/access.log
